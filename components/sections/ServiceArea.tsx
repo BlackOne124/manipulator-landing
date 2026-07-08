@@ -1,5 +1,4 @@
 import SectionHeading from "@/components/ui/SectionHeading";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { serviceAreaCities, siteConfig } from "@/lib/site-config";
 
 export default function ServiceArea() {
@@ -29,7 +28,14 @@ export default function ServiceArea() {
         </div>
 
         <div className="relative h-[420px] w-full overflow-hidden rounded-[28px] border border-white/8">
-          <ImagePlaceholder label="Карта зоны обслуживания" />
+          <iframe
+            src={siteConfig.mapEmbedUrl}
+            title={`Карта зоны обслуживания — ${siteConfig.city}`}
+            width="100%"
+            height="100%"
+            loading="lazy"
+            className="border-0 grayscale-[15%]"
+          />
           <div className="pointer-events-none absolute bottom-5 left-5 rounded-full bg-bg/75 px-[18px] py-2.5 text-sm font-bold text-accent backdrop-blur-md">
             Радиус до {siteConfig.radiusKm} км
           </div>
