@@ -25,7 +25,7 @@ export default function Hero() {
         </p>
 
         <div className="mt-11 flex flex-wrap justify-center gap-4">
-          <Button href={siteConfig.phoneHref} variant="primary">
+          <Button href={siteConfig.phoneHref} variant="primary" disabled>
             Позвонить: {siteConfig.phone}
           </Button>
           <Button href="#contact" variant="secondary">

@@ -2,7 +2,8 @@ export const siteConfig = {
   name: "МанипуляторСервис",
   phone: "8 985 383-38-94",
   phoneHref: "tel:+79853833894",
-  workingHours: "Ежедневно, 07:00–22:00",
+  contactName: "Сергей",
+  workingHours: "Ежедневно, 09:00–20:00",
   radiusKm: 40,
   city: "Бронницы",
   region: "Московская область",
@@ -65,8 +66,6 @@ export const specs = [
 
 export const fleet = [
   { label: "Манипулятор до 3 т", image: "/images/kamaz-1.webp" },
-  { label: "Манипулятор до 5 т", image: "/images/kamaz-2.webp" },
-  { label: "Манипулятор-эвакуатор" },
 ];
 
 export const companyRequisites = {

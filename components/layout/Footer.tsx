@@ -17,7 +17,11 @@ export default function Footer() {
             © {new Date().getFullYear()} {siteConfig.name}. {siteConfig.city},{" "}
             {siteConfig.region}.
           </div>
-          <a href={siteConfig.phoneHref} className="text-[15px] font-bold text-fg">
+          <a
+            href={siteConfig.phoneHref}
+            className="flex items-baseline gap-2 text-[15px] font-bold text-fg"
+          >
+            <span className="font-normal text-fg/55">{siteConfig.contactName}:</span>
             {siteConfig.phone}
           </a>
         </div>

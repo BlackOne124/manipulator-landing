@@ -5,6 +5,7 @@ type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
   children: ReactNode;
   variant?: "primary" | "secondary";
+  disabled?: boolean;
 };
 
 export default function Button({
@@ -12,6 +13,7 @@ export default function Button({
   children,
   variant = "primary",
   className = "",
+  disabled = false,
   ...props
 }: ButtonProps) {
   const base =
@@ -22,6 +24,14 @@ export default function Button({
     secondary:
       "border border-white/16 text-fg font-semibold hover:border-white/32",
   };
+
+  if (disabled) {
+    return (
+      <span className={`${base} ${variants[variant]} ${className} cursor-default`}>
+        {children}
+      </span>
+    );
+  }
 
   return (
     <Link
